@@ -1,3 +1,4 @@
+
 class calc:
     def __init__(self,a,b):
         self.num1=a
@@ -16,8 +17,8 @@ class calc:
         return self.division
 n=int(input("Enter a choice:"))
 if(n==0):
-    add1=calc(20,10)
-    print("Sum=",add1.add())
+    a=calc(20,10)
+    print(a.add())
 elif(n==1):
     sub1=calc(20,10)
     print("Substraction=",sub1.sub())
