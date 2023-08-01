@@ -6,28 +6,30 @@ class bank:
     def deposit(self,amt):
         self.amount=amt
         self.amt=self.balance+self.amount
-    def withdraw(self,amt2):
-        if amt2>self.balance:
-            print("Insufficient Balance!!!")
+        return self.amt
+    def withdraw(self,amt):
+        if amt>self.balance:
+            print("Sorry,insufficient Balance!!!")
         else:
-            self.amount2=amt2
-            self.amt2=self.balance-self.amt2
+            self.amount2=amt
+            self.amt=self.balance-self.amount2
+            return self.amt
     def bal(self):
         print("Balance=",self.balance)
 name=input("Please enter your name:")
 account_number=int(input("Please enter your account number:"))
 balance=int(input("Please enter your current balance:"))
+amt1=bank(name,account_number,balance)
 n=int(input("Please select your choice:"))
 if n==0:
     amt=int(input("Enter the amount:"))
-    amt1=bank(name,account_number,balance)
-    print("Your current balance=",amt1.deposit(amt))
+    amt1.deposit(amt)
 elif n==1:
-    amt2=int(input("Enter the amount:"))
-    amt3=bank(name,account_number,balance)
-    print("Your current balance=",amt3.withdraw(amt2))
+    amt=int(input("Enter the amount:"))
+    #amt3=bank(name,account_number,balance)
+    amt1.withdraw(amt)
 elif n==3:
-    print("Your current balance=",bal())
+    amt1.bal()
 else:
     print("Wrong choice!!!")
 
