@@ -1,20 +1,18 @@
-class person:
-    def __init__(self,name,age):
+class Animal:
+    def __init__(self,name):
         self.name=name
-        self.age=age
-    def display(self):
-        print("name=",self.name)
-        print("age=",self.age)
-
-class student(person):
-    def __init__(self,rollno,name,age,per):
-        self.rollno=rollno
-        super().__init__(name,age)
-        self.per=per
-    def display(self):
-        print("rollno:",self.rollno)
-        super().display()
-        print("percentage:",self.per)
-s1=student(101,"Asa",21,75.50)
-print("Student details:")
-s1.display()
+class speak(Animal):
+    def __init__(self,name):
+        super().__init__(name)
+    def sound(self):
+        if self.name=='cat':
+            print("meow...meow")
+        elif self.name=='dog':
+            print("bow...bow")
+        elif self.name=='horse':
+            print("neigh....neigh")
+        else:
+            print("wrong input")
+n=input("Enter the name of the animal:")
+s=speak(n)
+s.sound()
