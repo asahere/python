@@ -16,4 +16,8 @@ class square(shape):
         self.side = side
 
     def calculate_area(self):
-        return self.side * self.side    
+        return self.side * self.side
+circle=shape.circle("Red",5)
+square=shape.square("Blue",4)
+print("Circle Area:",circle.calculate_area())
+print("Square Area:",square.calculate_area())
