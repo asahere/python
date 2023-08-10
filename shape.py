@@ -3,21 +3,14 @@ class shape:
         self.color = color
 
 class circle(shape):
-    def __init__(self,color):
+    def __init__(self,color,radius):
         super().__init__(color)
-        self.radius = radius
-
-    def calculate_area(self):
-        return 3.14*self.radius*self.radius
+        print("Area of circle=",3.14*radius**2)
     
 class square(shape):
-    def __init__(self,color,side):
+    def __init__(self,color,side_length):
         super().__init__(color)
-        self.side = side
+        print("Area of square=",side_length**2)
+obj1=circle("Red",5)
+obj2=square("Blue",4)
 
-    def calculate_area(self):
-        return self.side * self.side
-circle=shape.circle("Red",5)
-square=shape.square("Blue",4)
-print("Circle Area:",circle.calculate_area())
-print("Square Area:",square.calculate_area())
