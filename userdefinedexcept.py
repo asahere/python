@@ -1,4 +1,4 @@
-classs InvalidRange(Exception):
+class InvalidRange(Exception):
         pass
 try:
     marks=input('Enter the Numerator')
