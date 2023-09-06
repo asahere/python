@@ -1,0 +1,16 @@
+import sqlite3
+con=sqlite3.connect("data.db")
+print("Connection Established")
+#con.execute("CREATE TABLE employee(emp_id int,ename varchar(20),dept_id int,salary int,dname varchar(20),dep_location varchar(20))")
+#con.execute("INSERT INTO employee values(1007,'Alice',3,3500,'Finance','Mumbai')")
+#Ans1)x=con.execute("SELECT * FROM employee")
+#Ans2)x=con.execute("SELECT * FROM employee WHERE dep_location='New Delhi'")
+#Ans3)x=con.execute("SELECT ename FROM employee WHERE salary>4000")
+#Ans4)x=con.execute("SELECT ename FROM employee")
+#Ans5)x=con.execute("SELECT ename,dname FROM employee")
+#Ans6)x=con.execute("UPDATE employee SET dep_location='Chennai' WHERE ename='Anna'")
+#x=con.execute("SELECT * FROM employee")
+for i in x:
+    print(i)
+con.commit()
+con.close()
